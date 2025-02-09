@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css'; // Ensure you import any global styles (like font imports) here
+import './App.css'; // Ensure any global styles or font imports are here
 
 function App() {
   const [message, setMessage] = useState('');
@@ -17,10 +17,11 @@ function App() {
     const buttonWidth = button.offsetWidth;
     const buttonHeight = button.offsetHeight;
 
-    // Use the entire viewport dimensions for positioning
+    // Calculate the viewport dimensions minus the button size
     const containerWidth = window.innerWidth - buttonWidth;
     const containerHeight = window.innerHeight - buttonHeight;
 
+    // Generate random positions
     const randomLeft = Math.random() * containerWidth;
     const randomTop = Math.random() * containerHeight;
 
@@ -30,25 +31,20 @@ function App() {
     });
   };
 
-  // Container styling with a heart pattern overlay and dashed border
+  // Container styling with a clean, solid border
   const containerStyle = {
     position: 'relative',
     width: '100vw',
     height: '100vh',
     background: 'linear-gradient(135deg, #ff9a9e, #fad0c4)',
-    // Overlay a subtle heart pattern (sourced from transparenttextures.com)
-    backgroundImage:
-      'linear-gradient(135deg, #ff9a9e, #fad0c4), url("https://www.transparenttextures.com/patterns/heart-court.png")',
-    backgroundRepeat: 'repeat',
-    overflow: 'hidden',
-    border: '8px dashed #ff3366',
+    border: '8px solid #ff3366', // Simple solid border
     borderRadius: '20px',
     padding: '20px',
     boxSizing: 'border-box',
     textAlign: 'center',
   };
 
-  // Headings styled with a cursive font and shadow
+  // Heading styling with a cursive font and subtle text shadow
   const headingStyle = {
     fontSize: '3rem',
     color: '#ff3366',
@@ -60,7 +56,7 @@ function App() {
   // "Yes" button styling (fixed at the bottom center)
   const yesButtonStyle = {
     position: 'absolute',
-    bottom: '50px',
+    bottom: '200px',
     left: '50%',
     transform: 'translateX(-50%)',
     padding: '10px 20px',
