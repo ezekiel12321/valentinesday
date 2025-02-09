@@ -67,6 +67,7 @@ function App() {
     cursor: 'pointer',
     color: '#fff',
     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    zIndex: 1, // Lower stacking order than the No button
   };
 
   // "No" button styling (it jumps around the viewport)
@@ -83,6 +84,7 @@ function App() {
     color: '#fff',
     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
     transition: 'top 0.3s ease, left 0.3s ease',
+    zIndex: 2, // Ensure this button is on top of the message
   };
 
   // Message styling for when "Yes" is clicked
@@ -95,6 +97,7 @@ function App() {
     color: '#ff3366',
     fontFamily: "'Dancing Script', cursive",
     textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+    zIndex: 1, // Lower stacking order than the No button
   };
 
   return (
