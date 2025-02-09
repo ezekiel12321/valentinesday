@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css'; // Ensure any global styles or font imports are here
 
+
 function App() {
   const [message, setMessage] = useState('');
   const [noButtonPosition, setNoButtonPosition] = useState({
@@ -9,7 +10,7 @@ function App() {
   });
 
   const handleYesClick = () => {
-    setMessage("Thank you for being my valentines!!! I love you so much! ❤ ");
+    setMessage("Thank you for being my valentine!!! I love you so much! ❤ ");
   };
 
   const handleNoMouseEnter = (e) => {
