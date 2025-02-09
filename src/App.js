@@ -56,7 +56,7 @@ function App() {
   // "Yes" button styling (fixed at the bottom center)
   const yesButtonStyle = {
     position: 'absolute',
-    bottom: '200px',
+    bottom: '300px',
     left: '50%',
     transform: 'translateX(-50%)',
     padding: '10px 20px',
